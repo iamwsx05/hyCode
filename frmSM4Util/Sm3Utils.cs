@@ -12,6 +12,7 @@ namespace frmSM4Util
     public class Sm3Utils
     {
         private static  string ENCODING = "UTF-8";
+
         public static string encrypt(string paramStr)
         {
             // 将返回的hash值转换成16进制字符串
