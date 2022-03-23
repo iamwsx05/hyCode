@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="createVmcardQRcode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="createVmcardQRcodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="createVmcardQRcodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modifyVmcardInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modifyVmcardInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="modifyVmcardInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPersonInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPersonInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getPersonInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getActiveQrCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getActiveQrCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getActiveQrCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPersonInfoByQrCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPersonInfoByQrCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getPersonInfoByQrCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="queryIfHasRegistered">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="queryIfHasRegisteredResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryIfHasRegisteredResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="activateVmcardQRcode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="activateVmcardQRcodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="activateVmcardQRcodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Encrypt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EncryptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EncryptResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeEncrypt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeEncryptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeEncryptResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="createVmcardQRcodeSoapIn">
+    <wsdl:part name="parameters" element="tns:createVmcardQRcode" />
+  </wsdl:message>
+  <wsdl:message name="createVmcardQRcodeSoapOut">
+    <wsdl:part name="parameters" element="tns:createVmcardQRcodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="modifyVmcardInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:modifyVmcardInfo" />
+  </wsdl:message>
+  <wsdl:message name="modifyVmcardInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:modifyVmcardInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPersonInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:getPersonInfo" />
+  </wsdl:message>
+  <wsdl:message name="getPersonInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:getPersonInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getActiveQrCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:getActiveQrCode" />
+  </wsdl:message>
+  <wsdl:message name="getActiveQrCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:getActiveQrCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPersonInfoByQrCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:getPersonInfoByQrCode" />
+  </wsdl:message>
+  <wsdl:message name="getPersonInfoByQrCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:getPersonInfoByQrCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="queryIfHasRegisteredSoapIn">
+    <wsdl:part name="parameters" element="tns:queryIfHasRegistered" />
+  </wsdl:message>
+  <wsdl:message name="queryIfHasRegisteredSoapOut">
+    <wsdl:part name="parameters" element="tns:queryIfHasRegisteredResponse" />
+  </wsdl:message>
+  <wsdl:message name="activateVmcardQRcodeSoapIn">
+    <wsdl:part name="parameters" element="tns:activateVmcardQRcode" />
+  </wsdl:message>
+  <wsdl:message name="activateVmcardQRcodeSoapOut">
+    <wsdl:part name="parameters" element="tns:activateVmcardQRcodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="EncryptSoapIn">
+    <wsdl:part name="parameters" element="tns:Encrypt" />
+  </wsdl:message>
+  <wsdl:message name="EncryptSoapOut">
+    <wsdl:part name="parameters" element="tns:EncryptResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeEncryptSoapIn">
+    <wsdl:part name="parameters" element="tns:DeEncrypt" />
+  </wsdl:message>
+  <wsdl:message name="DeEncryptSoapOut">
+    <wsdl:part name="parameters" element="tns:DeEncryptResponse" />
+  </wsdl:message>
+  <wsdl:portType name="hyCodeServiceSoap">
+    <wsdl:operation name="createVmcardQRcode">
+      <wsdl:input message="tns:createVmcardQRcodeSoapIn" />
+      <wsdl:output message="tns:createVmcardQRcodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="modifyVmcardInfo">
+      <wsdl:input message="tns:modifyVmcardInfoSoapIn" />
+      <wsdl:output message="tns:modifyVmcardInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPersonInfo">
+      <wsdl:input message="tns:getPersonInfoSoapIn" />
+      <wsdl:output message="tns:getPersonInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getActiveQrCode">
+      <wsdl:input message="tns:getActiveQrCodeSoapIn" />
+      <wsdl:output message="tns:getActiveQrCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPersonInfoByQrCode">
+      <wsdl:input message="tns:getPersonInfoByQrCodeSoapIn" />
+      <wsdl:output message="tns:getPersonInfoByQrCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="queryIfHasRegistered">
+      <wsdl:input message="tns:queryIfHasRegisteredSoapIn" />
+      <wsdl:output message="tns:queryIfHasRegisteredSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="activateVmcardQRcode">
+      <wsdl:input message="tns:activateVmcardQRcodeSoapIn" />
+      <wsdl:output message="tns:activateVmcardQRcodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Encrypt">
+      <wsdl:input message="tns:EncryptSoapIn" />
+      <wsdl:output message="tns:EncryptSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeEncrypt">
+      <wsdl:input message="tns:DeEncryptSoapIn" />
+      <wsdl:output message="tns:DeEncryptSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="hyCodeServiceSoap" type="tns:hyCodeServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="createVmcardQRcode">
+      <soap:operation soapAction="http://tempuri.org/createVmcardQRcode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyVmcardInfo">
+      <soap:operation soapAction="http://tempuri.org/modifyVmcardInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPersonInfo">
+      <soap:operation soapAction="http://tempuri.org/getPersonInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getActiveQrCode">
+      <soap:operation soapAction="http://tempuri.org/getActiveQrCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPersonInfoByQrCode">
+      <soap:operation soapAction="http://tempuri.org/getPersonInfoByQrCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryIfHasRegistered">
+      <soap:operation soapAction="http://tempuri.org/queryIfHasRegistered" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="activateVmcardQRcode">
+      <soap:operation soapAction="http://tempuri.org/activateVmcardQRcode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Encrypt">
+      <soap:operation soapAction="http://tempuri.org/Encrypt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeEncrypt">
+      <soap:operation soapAction="http://tempuri.org/DeEncrypt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="hyCodeServiceSoap12" type="tns:hyCodeServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="createVmcardQRcode">
+      <soap12:operation soapAction="http://tempuri.org/createVmcardQRcode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyVmcardInfo">
+      <soap12:operation soapAction="http://tempuri.org/modifyVmcardInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPersonInfo">
+      <soap12:operation soapAction="http://tempuri.org/getPersonInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getActiveQrCode">
+      <soap12:operation soapAction="http://tempuri.org/getActiveQrCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPersonInfoByQrCode">
+      <soap12:operation soapAction="http://tempuri.org/getPersonInfoByQrCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryIfHasRegistered">
+      <soap12:operation soapAction="http://tempuri.org/queryIfHasRegistered" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="activateVmcardQRcode">
+      <soap12:operation soapAction="http://tempuri.org/activateVmcardQRcode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Encrypt">
+      <soap12:operation soapAction="http://tempuri.org/Encrypt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeEncrypt">
+      <soap12:operation soapAction="http://tempuri.org/DeEncrypt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="hyCodeService">
+    <wsdl:port name="hyCodeServiceSoap" binding="tns:hyCodeServiceSoap">
+      <soap:address location="http://14.29.188.58:9001/hyCodeService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="hyCodeServiceSoap12" binding="tns:hyCodeServiceSoap12">
+      <soap12:address location="http://14.29.188.58:9001/hyCodeService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
